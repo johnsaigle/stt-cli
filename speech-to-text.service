@@ -1,0 +1,16 @@
+[Unit]
+Description=Global Speech-to-Text Service
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 %h/coding/stt-app/simple_stt.py
+Environment=DISPLAY=:0
+Environment=OPENAI_API_KEY=your-key-here-replace-me
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=default.target

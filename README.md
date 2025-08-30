@@ -43,7 +43,7 @@ source ~/.bashrc
 
 ### Manual start
 ```bash
-python3 silence_optimized_stt.py
+python3 stt.py
 ```
 
 ### Controls
@@ -52,7 +52,7 @@ python3 silence_optimized_stt.py
 
 ## Files
 
-- `silence_optimized_stt.py` - **Recommended** - FFmpeg silence removal + normalization + 2x speed
+- `stt.py` - FFmpeg silence removal + normalization + 2x speed
 - `install.sh` - Sets up autostart on login
 
 ## Cost Optimization
