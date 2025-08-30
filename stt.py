@@ -49,7 +49,7 @@ class SilenceOptimizedSpeechToText:
         
         print("Speech-to-Text with Silence Removal & Audio Optimization")
         print("Hold F1 to record (up to 3min) -> FFmpeg processes -> Transcribe -> Type")
-        print("Press ESC to exit")
+        print("Exit with Ctrl + C")
 
     def record_audio(self):
         """Record audio naturally without interruption"""
@@ -233,9 +233,9 @@ class SilenceOptimizedSpeechToText:
                 self.is_recording = False
                 print("Processing with silence removal...")
                 threading.Thread(target=self.transcribe_and_type, daemon=True).start()
-            elif key == keyboard.Key.esc:
-                print("Goodbye!")
-                os._exit(0)
+            # elif key == keyboard.Key.esc:
+            #     print("Goodbye!")
+            #     os._exit(0)
         except AttributeError:
             pass
 
