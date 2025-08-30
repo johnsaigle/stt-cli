@@ -103,7 +103,7 @@ class SilenceOptimizedSpeechToText:
             cmd = [
                 'ffmpeg', '-i', input_path,
                 '-af', 
-                'silenceremove=start_periods=1:start_duration=0.1:start_threshold=-50dB:stop_periods=1:stop_duration=0.3:stop_threshold=-50dB,'
+                'silenceremove=start_periods=1:start_duration=0.1:start_threshold=-60dB:stop_periods=1:stop_duration=0.3:stop_threshold=-60dB,'
                 'dynaudnorm=p=0.9:g=5:r=0.9,'
                 'atempo=2.0',
                 '-ar', str(self.sample_rate),
