@@ -31,7 +31,7 @@ source ~/.bashrc
 ```
 3. Install autostart:
 
-> ![IMPORTANT]
+> [!IMPORTANT]
 > This will only run correctly if it has access to your OpenAI key somehow.
 
 ```bash
