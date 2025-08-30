@@ -10,9 +10,13 @@ A simple global speech-to-text application that records audio on hotkey press an
 - 3 minute maximum recording length
 - Runs in background, works system-wide
 
-## Installation (Arch Linux)
+## Installation 
+- Install ffmpeg using your package manager
 
-### Install dependencies
+### Arch Linux
+
+#### Install dependencies
+
 ```bash
 # NOTE: Some of these might only be available via AUR
 sudo pacman -S python-pyaudio python-openai python-pynput ffmpeg
@@ -21,14 +25,19 @@ sudo pacman -S python-pyaudio python-openai python-pynput ffmpeg
 ### Setup
 1. Clone or download this repository
 2. Set your OpenAI API key:
-   ```bash
-   echo 'export OPENAI_API_KEY="your-api-key-here"' >> ~/.bashrc
-   source ~/.bashrc
-   ```
+```bash
+echo 'export OPENAI_API_KEY="your-api-key-here"' >> ~/.bashrc
+source ~/.bashrc
+```
 3. Install autostart:
-   ```bash
-   ./install.sh
-   ```
+
+> ![IMPORTANT]
+> This will only run correctly if it has access to your OpenAI key somehow.
+
+```bash
+./install.sh
+```
+
 
 ## Usage
 
@@ -45,7 +54,6 @@ python3 silence_optimized_stt.py
 
 - `silence_optimized_stt.py` - **Recommended** - FFmpeg silence removal + normalization + 2x speed
 - `install.sh` - Sets up autostart on login
-- `start_stt.sh` - Background service control
 
 ## Cost Optimization
 
